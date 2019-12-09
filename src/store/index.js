@@ -14,6 +14,9 @@ export default new Vuex.Store({
     setRegex(state, regex) {
       state.regex = regex;
     },
+    setWords(state, words) {
+      state.words = words;
+    },
   },
   actions: {
     async fetchWords({ commit }) {
