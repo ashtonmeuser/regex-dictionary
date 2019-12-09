@@ -1,6 +1,8 @@
 {
   "name": "regex-dictionary",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "author": "Ashton Meuser",
+  "description": "An exercise in large datasets, expensive operations, and Web Workers",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
