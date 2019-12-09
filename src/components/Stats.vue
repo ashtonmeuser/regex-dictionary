@@ -1,6 +1,9 @@
 <template>
   <div>
     {{ loading ? "wait" : "done" }}
+    {{ loadTime }}
+    {{ results }}
+    {{ total }}
   </div>
 </template>
 
@@ -8,9 +11,10 @@
 export default {
   props: {
     loading: { type: Boolean, required: true },
+    loadTime: { type: Number, required: true },
+    results: { type: Number, required: true },
+    total: { type: Number, required: true },
   },
-  computed: { },
-  methods: { },
 };
 </script>
 

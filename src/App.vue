@@ -1,22 +1,27 @@
 <template>
   <div id="app">
-    <Header :loading="$store.state.loading" />
+    <Stats
+      :loading="$store.state.loading"
+      :loadTime="$store.state.loadTime"
+      :results="$store.state.filtered.length"
+      :total="$store.state.words.length"
+    />
     <TextInput
       v-model="regex"
       placeholder="Regex"
     />
-    <WordList :words="$store.state.words" />
+    <WordList :words="$store.state.filtered" />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
+import Stats from './components/Stats.vue';
 import TextInput from './components/TextInput.vue';
 import WordList from './components/WordList.vue';
 
 export default {
   components: {
-    Header,
+    Stats,
     TextInput,
     WordList,
   },
@@ -26,7 +31,7 @@ export default {
         return this.$store.state.regex;
       },
       set(value) {
-        this.$store.commit('setRegex', value);
+        this.$store.dispatch('filterWords', value);
       },
     },
   },
