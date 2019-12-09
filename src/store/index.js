@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import Axios from 'axios';
 
 Vue.use(Vuex);
 
@@ -15,5 +16,11 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    async fetchWords({ commit }) {
+      try {
+        const words = await Axios.get('/words.txt');
+        commit('setWords', words.data.split('\n'));
+      } catch (error) { /* FIXME: Handle error */ }
+    },
   },
 });
