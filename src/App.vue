@@ -1,14 +1,13 @@
 <template>
   <div id="app">
-    <Stats
-      :loading="$store.state.loading"
-      :loadTime="$store.state.loadTime"
-      :results="$store.state.filtered.length"
-      :total="$store.state.words.length"
-    />
     <TextInput
       v-model="regex"
       placeholder="Regex"
+    />
+    <Stats
+      :load-time="$store.state.loadTime"
+      :matches="$store.state.filtered.length"
+      :total="$store.state.words.length"
     />
     <WordList :words="$store.state.filtered" />
   </div>
@@ -45,6 +44,7 @@ export default {
 @import "./assets/variables.less";
 
 #app {
+  font-family: sans-serif;
   display: flex;
   flex-direction: column;
 }
