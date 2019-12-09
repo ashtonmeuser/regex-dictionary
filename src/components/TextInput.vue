@@ -2,7 +2,9 @@
   <input
     v-model="internalValue"
     type="text"
+    autofocus
     :placeholder="placeholder"
+    onblur="this.focus()"
   >
 </template>
 
@@ -27,4 +29,9 @@ export default {
 
 <style scoped lang="less">
 @import "../assets/variables.less";
+
+input {
+  flex-shrink: 0;
+  height: 30px;
+}
 </style>

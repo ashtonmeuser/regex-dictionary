@@ -43,9 +43,14 @@ export default {
 <style lang="less">
 @import "./assets/variables.less";
 
-#app {
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
+body {
+  margin: 0;
+  padding: 0;
+  #app {
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

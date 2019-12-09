@@ -29,10 +29,9 @@ export default {
 @import "../assets/variables.less";
 
 .recycle-scroller {
-  height: 400px;
   background-color: salmon;
-}
-.item {
-  height: 32px;
+  .item {
+    height: 32px;
+  }
 }
 </style>
