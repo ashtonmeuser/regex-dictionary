@@ -2,7 +2,7 @@
   <div id="app">
     <TextInput
       v-model="regex"
-      placeholder="Regex"
+      placeholder="Regular Expression"
     />
     <Stats
       :load-time="$store.state.loadTime"
@@ -44,6 +44,7 @@ export default {
 @import "./assets/variables.less";
 
 body {
+  color: @primary-text-color;
   margin: 0;
   padding: 0;
   #app {

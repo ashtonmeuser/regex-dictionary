@@ -31,7 +31,13 @@ export default {
 @import "../assets/variables.less";
 
 input {
+  margin: 10px 10px 0 10px;
+  border-radius: 5px;
+  border: 1px solid @secondary-text-color;
   flex-shrink: 0;
   height: 30px;
+  outline: none;
+  text-align: center;
+  font-size: 1.2em;
 }
 </style>

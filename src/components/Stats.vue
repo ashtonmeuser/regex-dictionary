@@ -40,17 +40,20 @@ export default {
 @import "../assets/variables.less";
 
 .stats {
+  margin: 5px;
   display: flex;
   flex-wrap: wrap;
   .stat {
     @media ( max-width: 500px ) {
-      flex-basis: 50%;
+      flex-basis: calc(50% - 10px);
     }
+    margin: 5px;
     flex-basis: 0;
     flex-grow: 1;
     text-align: center;
     .value {
-      font-size: 1.5em;
+      font-weight: bold;
+      font-size: 1.2em;
     }
     .key {
       color: @secondary-text-color;
