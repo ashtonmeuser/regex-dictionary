@@ -48,6 +48,8 @@ body {
   margin: 0;
   padding: 0;
   #app {
+    max-width: 900px;
+    margin: 0 auto;
     height: 100vh;
     font-family: sans-serif;
     display: flex;

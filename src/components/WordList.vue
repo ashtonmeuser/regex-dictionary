@@ -1,6 +1,5 @@
 <template>
   <div class="wordlist">
-    <div class="gradient" />
     <RecycleScroller
       v-slot="{ item }"
       class="recycle-scroller"
@@ -37,8 +36,8 @@ export default {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 5px;
-    background-image: linear-gradient(to bottom, white, rgba(255,255,255,0));
+    height: 7px;
+    background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
   }
   .recycle-scroller {
     height: 100%;

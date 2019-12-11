@@ -8,7 +8,6 @@
     autocapitalize="off"
     spellcheck="false"
     :placeholder="placeholder"
-    onblur="this.focus()"
   >
 </template>
 
@@ -44,5 +43,6 @@ input {
   outline: none;
   text-align: center;
   font-size: 1.2em;
+  font-family: monospace;
 }
 </style>

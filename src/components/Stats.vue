@@ -29,7 +29,7 @@ export default {
         { key: 'Load Time', value: `${(this.loadTime / 1000).toFixed(3)}s` },
         { key: 'Matches', value: this.matches.toLocaleString() },
         { key: 'Total', value: this.total.toLocaleString() },
-        { key: 'Percent', value: (this.matches / this.total * 100).toFixed(3) },
+        { key: 'Match Rate', value: `${(this.matches / this.total * 100).toFixed(3)}%` },
       ];
     },
   },
