@@ -43,6 +43,7 @@ export default {
   margin: 5px;
   display: flex;
   flex-wrap: wrap;
+  flex-shrink: 0;
   .stat {
     @media ( max-width: 500px ) {
       flex-basis: calc(50% - 10px);

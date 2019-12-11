@@ -3,6 +3,10 @@
     v-model="internalValue"
     type="text"
     autofocus
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
     :placeholder="placeholder"
     onblur="this.focus()"
   >
@@ -31,6 +35,7 @@ export default {
 @import "../assets/variables.less";
 
 input {
+  appearance: none;
   margin: 10px 10px 0 10px;
   border-radius: 5px;
   border: 1px solid @secondary-text-color;
