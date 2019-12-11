@@ -34,8 +34,9 @@ export default new Vuex.Store({
   actions: {
     async fetchWords({ state, commit, dispatch }) {
       try {
-        const words = await Axios.get('/words.txt');
-        commit('setWords', words.data.split('\n'));
+        const { data } = await Axios.get('https://raw.githubusercontent.com/dwyl/english-words/master/words.txt');
+        const words = data.split('\n').filter((x) => x !== '');
+        commit('setWords', words);
         dispatch('filterWords', state.regex);
       } catch (error) { /* FIXME: Handle error */ }
     },
