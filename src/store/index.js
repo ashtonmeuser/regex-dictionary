@@ -45,9 +45,9 @@ export default new Vuex.Store({
       commit('setRegex', regex);
       try {
         const startTime = new Date();
-        const worker = new WebWorker((w, r, m = false) => {
-          const p = RegExp(r);
+        const worker = new WebWorker((w, r, m = false) => { // Default to using RegExp.test()
           if (m) return w.filter((x) => x.match(r)); // Use String.match method
+          const p = RegExp(r);
           return w.filter((x) => p.test(x));
         });
         commit('setWorker', worker);
