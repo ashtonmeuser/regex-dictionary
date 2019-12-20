@@ -30,17 +30,17 @@ This experiment highlighted three interesting problems:
 
 ### Rendering
 
-Rendering a large list was made trivial by implementing [vue-virtual-scroller](https://github.com/Akryum/vue-virtual-scroller). A `RecycleScroller` component is introduced which renders only elements that are displayed. When a user scrolls, the existing list items' DOM is reused.
+Rendering a large list was made trivial by implementing [vue-virtual-scroller](https://github.com/Akryum/vue-virtual-scroller). A `RecycleScroller` component is introduced which renders only elements that are visible. When a user scrolls, the existing list items' DOM is reused.
 
-Simple elements are used within the `RecycleScroller` to avoid the overhead involved with functional Vue components.
+Simple elements are used within the `RecycleScroller` to avoid the overhead involved with rendering functional Vue components.
 
 A `DynamicScroller` should be used if list items are to have a dynamic height.
 
 ### Filtering
 
-The word list is filtered using a regex pattern. The two main ways to match strings against a regex pattern are [String.match()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) and [RegExp.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test). In practice, the `RegExp.test()` method proved to be far more efficient. See the Regex performance section for a deeper look into both methods.
+The word list is filtered using a regex pattern. The two main ways to match strings against a regex pattern are [String.match()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) and [RegExp.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test). In practice, the `RegExp.test()` method proved to be far more efficient. See the Regex Performance section of this document for a deeper look into both methods.
 
-The word list is filtered in the `filterWords` action of the [Vuex store](https://github.com/ashtonmeuser/regex-dictionary/blob/bea2edf667b98dd9a22477e7004820cb8a0d9433/src/store/index.js#L50).
+The word list is filtered in the `filterWords` action of the [Vuex store](/src/store/index.js).
 
 ### Threading
 
