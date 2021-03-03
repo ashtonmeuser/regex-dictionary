@@ -11,7 +11,7 @@
     "deploy": "aws s3 sync dist s3://regex-dictionary --delete"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "core-js": "^3.4.3",
     "vue": "^2.6.10",
     "vue-virtual-scroller": "^1.0.0-rc.2",
